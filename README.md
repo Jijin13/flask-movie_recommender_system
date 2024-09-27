@@ -29,8 +29,7 @@ The dataset used is a CSV file (movies.csv) that contains movie information such
 1. Clone the repository:
 
   ```sh
-  git clone https://github.com/yourusername/movie-recommender.git
-  cd movie-recommender
+  git clone https://github.com/Jijin13/flask-movie_recommender_system.git
   ```
 
 2. Create a virtual environment and activate it:
