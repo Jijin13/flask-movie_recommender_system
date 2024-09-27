@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Hello</title>
+    <link rel="Stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body class="img">
+    <div class="image"></div>
+    <div class="continer">
+        <h1>Movie Recommender System</h1>
+        <form action="greet" method="post">
+            {% if get_flashed_messages()|length > 1 %}
+                <h3>Recommendations:</h3>
+            {% endif %}
+            {% for message in get_flashed_messages() %}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" name="name_input" placeholder="Enter movie name">
+            <br>
+            <input type="submit" value="RECOMMEND" id="recommend">
+        </form>
+    </div>
+</body>
+</html>
